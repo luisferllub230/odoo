@@ -1,0 +1,23 @@
+version: '3.4'
+services:
+  postgres:
+    image: postgres:14.9
+    restart: always
+    container_name: postgres_v14
+    networks:
+      - odoo-network
+    environment:
+      - POSTGRES_USER=odoo
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_DB=postgres
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    ports:
+      - 5432:5432
+    volumes:
+      - pg1409:/var/lib/postgresql
+      - pg1409_data:/var/lib/postgresql/data
+volumes:
+  pg1409:
+  pg1409_data:
+networks:
+  odoo-network:
