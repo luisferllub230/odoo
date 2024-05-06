@@ -1,0 +1,3 @@
+[submodule "extra-addons/charts-image-generator"]
+	path = extra-addons/charts-image-generator
+	url = git@github.com:luisferllub230/charts-image-generator.git
